@@ -25,13 +25,12 @@ col2.metric("Clientes", "340", "+5")
 col3.metric("Promedio/mes", "$237", "-3%")
 
 # ── Datos y gráfico ──────────────────────────────
-# ── Datos y gráfico ──────────────────────────────
 ventas = [120, 130, 150, 170, 200, 250,
            300, 350, 400, 450, 380, 320]
 meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun",
           "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
 
-df = pd.DataFrame({"Mes": pd.Categorical(meses, categories=meses, ordered=True), "Ventas": ventas})
+df = pd.DataFrame({"Mes": meses, "Ventas": ventas})
 df = df.set_index("Mes")
 
 st.subheader("Ventas mensuales")
@@ -48,5 +47,3 @@ with st.expander("¿Cómo se calcularon estos datos?"):
 
 # ── Mensajes de estado ───────────────────────────
 st.success("¡App cargada correctamente!")
-
-#Gracias
