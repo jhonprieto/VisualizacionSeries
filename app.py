@@ -30,7 +30,7 @@ ventas = [120, 130, 150, 170, 200, 250,
 meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun",
           "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
 
-df = pd.DataFrame({"Mes": meses, "Ventas": ventas})
+df = pd.DataFrame({"Mes": pd.Categorical(meses, categories=meses, ordered=True), "Ventas": ventas})
 df = df.set_index("Mes")
 
 st.subheader("Ventas mensuales")
