@@ -48,3 +48,5 @@ with st.expander("¿Cómo se calcularon estos datos?"):
 
 # ── Mensajes de estado ───────────────────────────
 st.success("¡App cargada correctamente!")
+
+#Gracias
